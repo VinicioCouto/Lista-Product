@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/index.css">
     <title>Lista de Produtos</title>
 </head>
+
 <body>
     <main class="box-lista">
-        <div class="titulo"><h1>Cardapio</h1></div>
+        <div class="titulo">
+            <h1>Cardapio</h1>
+        </div>
         <div class="box-produto">
-                <div class="img-box">
+            <div class="img-box">
                 <img id="img-poroduto" src="/img/image-baklava-desktop.jpg" alt="imagem do produto">
+
                 <button id="add-carrinho">
                     <img src="/img/icon-add-to-cart.svg" alt="icone adicionar no carrinho">
                     Add no Carrinho
+                </button>
+
+                <button id="quantitade">
+                    <img id="menos-button" src="/img/icon-decrement-quantity.svg" alt="">
+                    <p id="quantidade">1</p>
+                    <img id="mais-button" src="/img/icon-increment-quantity.svg" alt="">
+
                 </button>
             </div>
 
@@ -22,8 +34,9 @@
                 <p id="Nome-protudo">Brownie de Caramelo</p>
                 <p id="valor">$5.50</p>
             </div>
-            
+
         </div>
     </main>
 </body>
+
 </html>

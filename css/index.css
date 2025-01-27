@@ -75,3 +75,37 @@ body{
 .valor-box{
     margin-top: 10px;
 }
+
+#quantitade{
+    width: 150px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    border: solid 1px rgb(165, 93, 10);
+    color: rgb(255, 255, 255);
+    background-color: rgb(165, 93, 10);
+    margin-top: -43px;
+    display: none;
+}
+
+#menos-button{
+    margin-left: 15px;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+#mais-button{
+    margin-right: 15px;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+#menos-button:hover{
+    transform: scale(1.5);
+}
+
+#mais-button:hover{
+    transform: scale(1.5);
+}
