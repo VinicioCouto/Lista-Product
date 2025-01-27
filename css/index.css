@@ -66,6 +66,7 @@ body{
     margin-top: -23px;
     cursor: pointer;
     transition: 0.5s ease-in-out;
+    z-index: 99;
 }
 
 #add-carrinho:hover{
@@ -87,7 +88,7 @@ body{
     color: rgb(255, 255, 255);
     background-color: rgb(165, 93, 10);
     margin-top: -43px;
-    display: none;
+    opacity: 0.0;
 }
 
 #menos-button{
@@ -98,7 +99,7 @@ body{
 
 #mais-button{
     margin-right: 15px;
-    transition: 0.5s ease-in-out;
+    transition: 0.1s ease-in-out;
     cursor: pointer;
 }
 
