@@ -9,13 +9,38 @@
 </head>
 
 <body>
+    <div class="titulo">
+        <h1>Cardapio</h1>
+    </div>
     <main class="box-lista">
-        <div class="titulo">
-            <h1>Cardapio</h1>
-        </div>
+
         <div class="box-produto">
             <div class="img-box">
                 <img id="img-poroduto" src="/img/image-baklava-desktop.jpg" alt="imagem do produto">
+
+                <button class="add-carrinho">
+                    <img src="/img/icon-add-to-cart.svg" alt="icone adicionar no carrinho">
+                    Add no Carrinho
+                </button>
+
+                <button class="quantitade">
+                    <img class="menos-button" src="/img/icon-decrement-quantity.svg" alt="Decrementar">
+                    <p class="numero-quantidade">1</p>
+                    <img class="mais-button" src="/img/icon-increment-quantity.svg" alt="Incremantar">
+
+                </button>
+            </div>
+
+            <div class="valor-box">
+                <p class="Nome-protudo">Esfiha de Frango</p>
+                <p class="valor">$5.50</p>
+            </div>
+
+        </div>
+
+        <div class="box-produto">
+            <div class="img-box">
+                <img id="img-poroduto" src="/img/image-brownie-desktop.jpg" alt="imagem do produto">
 
                 <button class="add-carrinho" onclick="MudarQuantidade()">
                     <img src="/img/icon-add-to-cart.svg" alt="icone adicionar no carrinho">
@@ -31,15 +56,15 @@
             </div>
 
             <div class="valor-box">
-                <p id="Nome-protudo">esfiha de frango</p>
-                <p id="valor">$5.50</p>
+                <p class="Nome-protudo">Brownie de Chocolate</p>
+                <p class="valor">$6.00</p>
             </div>
 
         </div>
 
         <div class="box-produto">
             <div class="img-box">
-                <img id="img-poroduto" src="/img/image-baklava-desktop.jpg" alt="imagem do produto">
+                <img id="img-poroduto" src="/img/image-cake-desktop.jpg" alt="imagem do produto">
 
                 <button class="add-carrinho" onclick="MudarQuantidade()">
                     <img src="/img/icon-add-to-cart.svg" alt="icone adicionar no carrinho">
@@ -55,8 +80,32 @@
             </div>
 
             <div class="valor-box">
-                <p id="Nome-protudo">esfiha de frango</p>
-                <p id="valor">$5.50</p>
+                <p class="Nome-protudo">Brolo de Morango</p>
+                <p class="valor">$4.60</p>
+            </div>
+
+        </div>
+
+        <div class="box-produto">
+            <div class="img-box">
+                <img id="img-poroduto" src="/img/image-creme-brulee-desktop.jpg" alt="imagem do produto">
+
+                <button class="add-carrinho" onclick="MudarQuantidade()">
+                    <img src="/img/icon-add-to-cart.svg" alt="icone adicionar no carrinho">
+                    Add no Carrinho
+                </button>
+
+                <button class="quantitade">
+                    <img class="menos-button" src="/img/icon-decrement-quantity.svg" alt="Decrementar">
+                    <p class="numero-quantidade">1</p>
+                    <img class="mais-button" src="/img/icon-increment-quantity.svg" alt="Incremantar">
+
+                </button>
+            </div>
+
+            <div class="valor-box">
+                <p class="Nome-protudo">Creme Brulee</p>
+                <p class="valor">$9.90</p>
             </div>
 
         </div>
