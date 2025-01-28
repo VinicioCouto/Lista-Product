@@ -11,7 +11,6 @@ buttonMais.addEventListener('click', () => {
 
 buttonMenos.addEventListener('click', () => {
     if (numeroQuantidade.textContent == 1) {
-        alert('Quantidade zerada! Removendo do carrinho')
         numeroQuantidade.textContent = 0
         MudarQuantidade()
     } else {
