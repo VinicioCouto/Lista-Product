@@ -22,6 +22,7 @@
 body{
     font-family: 'fonte01';
     background-color: rgb(250, 247, 241);
+    display: flex;
 }
 
 .box-lista {
@@ -110,4 +111,76 @@ body{
 
 .mais-button:hover{
     transform: scale(1.5);
+}
+
+
+.box-carrinho{
+    background-color: rgb(255, 255, 255);
+    margin-left: 100px;
+    margin-top: 50px;
+    width: 350px;
+    max-height: 500px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-carrinho{
+    font-size: 20px;
+    margin-left: -150px;
+    margin-top: 15px;
+    color: rgb(165, 93, 10);
+}
+
+.produto-add{
+    display: flex;
+    width: 330px;
+    height: 65px;
+    justify-content: space-between;
+    margin-top: 10px;
+    border-bottom: solid 1px rgb(198, 198, 198);
+}
+
+.info-produtos{
+    width: 200px;
+}
+
+.nome-carrinho{
+    margin-left: 15px;
+    margin-bottom: 10px;
+    margin-top: 8px;
+    font-size: 15px;
+}
+
+.valor-calculo{
+    display: flex;
+    margin-left: 15px;
+}
+
+.valor-calculo p {
+    margin-top: 0;
+    margin-right: 10px;
+    font-size: 13px;
+}
+
+.valor-calculo p:nth-of-type(3) {
+    font-weight: bold;
+}
+
+.valor-calculo p:nth-of-type(1){
+    color: rgb(165, 93, 10);
+    font-weight: bold;
+}
+
+.img-remover{
+    width: 15px;
+    margin-top: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.img-remover:hover{
+    transform: scale(1.2);
 }
