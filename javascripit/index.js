@@ -8,7 +8,7 @@ const totalValor = document.querySelector('.total-valor');
 
 let totalCarrinho = 0;
 let itensCarrinho = [];
-let contcarrinho = 250
+let contcarrinho = 250 - 65
 
 addCarrinhos.forEach((addCarinho, index) => {
     const quantidade = quantidades[index];
@@ -57,16 +57,14 @@ addCarrinhos.forEach((addCarinho, index) => {
 
         mudarQuantidade(addCarinho, quantidade, numeroQuantidade);
 
-        // Adiciona o produto no carrinho
         adicionarAoCarrinho(produtoNome, produtoValor, quantidadeAtual);
 
-        // Atualiza o estado do carrinho
         atualizarCarrinho();
     });
 });
 
 function mudarQuantidade(addCarinho, quantidade, numeroQuantidade) {
-    if (parseInt(numeroQuantidade.textContent) === 0) {
+    if (parseInt(numeroQuantidade.textContent) > 1) {
         addCarinho.style.opacity = '1.0';
         quantidade.style.opacity = '0.0';
         addCarinho.style.zIndex = '99';
@@ -89,27 +87,29 @@ function adicionarAoCarrinho(nome, valor, quantidade) {
     }
 
     totalCarrinho += valor * quantidade;
-
+    decerCarrinho()
 
 }
 
 function atualizarCarrinho() {
-    carrinhoProdutos.innerHTML = ''; // Limpa o carrinho
+    carrinhoProdutos.innerHTML = ''; 
     itensCarrinho.forEach(item => {
         const divProduto = document.createElement('div');
         divProduto.classList.add('teste');
-        divProduto.innerHTML = `
+        divProduto.innerHTML += `
+            <div class="produto-add">
             <div class="info-produtos">
                         <p class="nome-carrinho">${item.nome}</p>
 
                         <div class="valor-calculo">
-                            <p class="quantidade-escolhida">${item.quantidade}</p>
+                            <p class="quantidade-escolhida">${item.quantidade}x</p>
                             <p class="valor-unitario">@${item.valor.toFixed(2)}</p>
                             <p class="valor-pagar">$${(item.valor * item.quantidade).toFixed(2)}</p>
                         </div> 
                     <div class="apagar">
                 <img class="img-remover" src="/img/icon-remove-item.svg" alt="Remover produto">
                 </div>
+            </div>
             </div>
         `;
 
@@ -119,7 +119,6 @@ function atualizarCarrinho() {
         });
 
         carrinhoProdutos.appendChild(divProduto);
-        decerCarrinho()
     });
 
     // Atualiza o total
@@ -147,12 +146,21 @@ function removerDoCarrinho(nome) {
         itensCarrinho.splice(itemIndex, 1);
         atualizarCarrinho();
     }
+    subirCarrinho()
 }
 
 function decerCarrinho() {
     const DivCarrinho = document.querySelector('.box-carrinho')
+    const finalCcarrinho = document.querySelector('.final-carrinho')
 
-    contcarrinho += 10
+    contcarrinho += 65
+    DivCarrinho.style.maxHeight = `${contcarrinho}px`;
+}
+
+function subirCarrinho() {
+    const DivCarrinho = document.querySelector('.box-carrinho')
+
+    contcarrinho -= 45
     DivCarrinho.style.maxHeight = `${contcarrinho}px`;
 }
 

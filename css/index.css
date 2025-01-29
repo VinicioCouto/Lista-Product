@@ -138,25 +138,36 @@ body{
 }
 
 
-.produto-add{
+.produto-add {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 400px; 
-    height: 65px;
+    min-height: 50px;
     margin-top: 10px;
     border-bottom: solid 1px rgb(198, 198, 198);
 }
 
 
+
+
 .info-produtos{
     width: 200px;
+    margin-top: -10px;
 }
 
 .apagar{
     margin-top: -55px;
     margin-left: 350px;
 }
+
+.final-carrinho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto; 
+}
+
 
 .nome-carrinho{
     margin-left: 15px;
@@ -234,13 +245,16 @@ body{
     transform: scale(1.1);
 }
 
-.carrinho-cheio{
+.carrinho-cheio {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     pointer-events: none;
+    flex-grow: 1; 
 }
+
 
 .carrinho-vazio{
     width: 380px;
@@ -266,5 +280,8 @@ body{
 .carrinho-cheio.ativo {
     opacity: 1;
     pointer-events: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
