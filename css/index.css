@@ -126,6 +126,7 @@ body{
     min-height: 50px; 
     max-height: 250px; 
     height: auto; 
+    width: 400px;
 
 }
 
@@ -136,17 +137,25 @@ body{
     color: rgb(165, 93, 10);
 }
 
+
 .produto-add{
     display: flex;
-    width: 330px;
-    height: 65px;
+    flex-direction: column;
     justify-content: space-between;
+    width: 400px; 
+    height: 65px;
     margin-top: 10px;
     border-bottom: solid 1px rgb(198, 198, 198);
 }
 
+
 .info-produtos{
     width: 200px;
+}
+
+.apagar{
+    margin-top: -55px;
+    margin-left: 350px;
 }
 
 .nome-carrinho{
@@ -189,7 +198,7 @@ body{
 }
 
 .total{
-    width: 330px;
+    width: 400px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -216,6 +225,7 @@ body{
     border-radius: 25px;
     margin-top: 20px;
     margin-bottom: 20px;
+    margin-left: 15px;
     transition: 0.5s ease-in-out;
     cursor: pointer;
 }
@@ -225,7 +235,11 @@ body{
 }
 
 .carrinho-cheio{
-    display: none;
+    display: flex;
+    flex-wrap: wrap;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
 }
 
 .carrinho-vazio{
@@ -233,4 +247,24 @@ body{
     display: flex;
     justify-content: center;
     height: 200px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
 }
+
+.img-vazia{
+    width: 230px;
+    margin-top: -200px;
+}
+
+
+.carrinho-vazio.ativo{
+    opacity: 1;
+    pointer-events: auto;
+} 
+
+.carrinho-cheio.ativo {
+    opacity: 1;
+    pointer-events: auto;
+}
+
