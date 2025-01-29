@@ -113,7 +113,6 @@ function atualizarCarrinho() {
             </div>
         `;
 
-        // Adiciona evento para remover produto
         divProduto.querySelector('.img-remover').addEventListener('click', () => {
             removerDoCarrinho(item.nome);
         });
